@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+
+    <style>
+        body {
+            background-color: rgba(0, 0, 255, 0.315);
+            font-family: Arial, Helvetica, sans-serif;
+            /* position: relative; */
+        }
+
+        section {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 3px solid;
+            padding: 10px;
+            transform: translate(-50%, -50%);
+            animation: transforme 3s ease-in-out;
+        }
+
+        @keyframes transforme{
+           0% {
+               top: 0vh;
+           }
+
+           100% {
+               top: 50vh;
+           }
+        }
+
+        input {
+            width: 250px;
+            outline: none;
+            border: none;
+            border-radius: 3px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            width: 80px;
+            background: linear-gradient(to right, #ccc 50%, #111 50%);
+            background-size: 200%, 100%;
+            background-position: right bottom;
+            
+            color: white;
+            cursor: pointer;
+            transition: 1s all ease-in-out;
+        }
+
+        .btn:hover {
+            background-position: left bottom;
+        }
+
+    
+    </style>
+</head>
+<body>
+   <section>
+        <figcaption>
+            <h1>Olá seja bem vindo</h1>
+            <p>Gostariamos de te conhecer melhor  &#x1F600!
+                Que tal me falar de que pais você e ?
+            </p>
+            <input type="text" id="txtpais" name="txtv" placeholder="Escreva aqui de qual verificarPais você e?">
+            <input type="button" value="verificar" class="btn" id="toCheck">
+            <div class="res">
+            </div>
+        </figcaption>
+   </section>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
